@@ -118,6 +118,68 @@
           }
         }
       }
+    },
+    "package1": {
+      "projectType": "library",
+      "root": "libs/package1",
+      "sourceRoot": "libs/package1/src",
+      "prefix": "multiapp",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/package1/tsconfig.lib.json",
+              "libs/package1/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/package1/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/package1/jest.config.js",
+            "tsConfig": "libs/package1/tsconfig.spec.json",
+            "setupFile": "libs/package1/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "package2": {
+      "projectType": "library",
+      "root": "libs/package2",
+      "sourceRoot": "libs/package2/src",
+      "prefix": "multiapp",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/package2/tsconfig.lib.json",
+              "libs/package2/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/package2/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/package2/jest.config.js",
+            "tsConfig": "libs/package2/tsconfig.spec.json",
+            "setupFile": "libs/package2/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

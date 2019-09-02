@@ -13,6 +13,12 @@
     },
     "multiapp": {
       "tags": []
+    },
+    "package1": {
+      "tags": []
+    },
+    "package2": {
+      "tags": []
     }
   }
 }

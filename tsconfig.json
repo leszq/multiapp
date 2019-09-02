@@ -15,7 +15,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@multiapp/package1": ["libs/package1/src/index.ts"],
+      "@multiapp/package2": ["libs/package2/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
