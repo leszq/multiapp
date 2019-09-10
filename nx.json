@@ -12,13 +12,13 @@
       "tags": []
     },
     "multiapp": {
-      "tags": []
+      "tags": ["multiapp"]
     },
     "package1": {
-      "tags": []
+      "tags": ["package-1"]
     },
     "package2": {
-      "tags": []
+      "tags": ["package-2"]
     }
   }
 }
